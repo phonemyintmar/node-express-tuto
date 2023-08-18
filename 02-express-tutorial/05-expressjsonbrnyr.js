@@ -2,7 +2,6 @@ const express = require("express")
 const app = express()
 const authorize = require("./authorize")
 const logger = require("./logger")
-const router = require("./routes/people")
 
 //d lo lote tae ny yr mhr ll order matters, a yin yay tr a yin lr tl
 //d mhr so authorize a yin lr mhr
@@ -10,8 +9,6 @@ const router = require("./routes/people")
 // app.use([authorize, logger])
 
 app.use(express.json({ extended: false }))
-
-app.use(router)
 
 app.get("/", function (req, res) {
     console.log("test");
